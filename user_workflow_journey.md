@@ -2,482 +2,653 @@
 
 ## Project Overview
 
-This documentation outlines comprehensive user workflow journeys for a modern Angular-based application featuring authentication, chat functionality, data visualization, and interactive components. The application serves as a comprehensive platform for user engagement with multiple touchpoints and experiences.
+This document outlines comprehensive user workflow journeys for a modern Angular-based application featuring authentication, chat functionality, data visualization, and comprehensive UI components. The application serves as a multi-purpose platform supporting various user experiences from onboarding to advanced feature utilization.
 
 ---
 
-## Experience Framework
+## Experience Categories
 
 ### Primary User Experiences:
-1. **Authentication & Onboarding Experience**
-2. **Interactive Communication Experience** 
-3. **Data Management & Visualization Experience**
-4. **Content Discovery & Navigation Experience**
-5. **Account Management & Settings Experience**
+1. **Authentication & Onboarding** - User registration, login, and initial setup
+2. **Interactive Communication** - Chat-based interactions and AI assistance
+3. **Data Management** - Information input, processing, and visualization
+4. **Content Discovery** - Navigation, search, and content exploration
+5. **Account Management** - Profile management and settings configuration
+6. **Support & Troubleshooting** - Help-seeking and problem resolution
 
 ---
 
-## EXPERIENCE 1: AUTHENTICATION & ONBOARDING
+## Scenario 1: New User Authentication & Onboarding
 
-### Scenario 1.1: New User Registration
+### Context
+Sarah, a marketing professional, discovers the platform through a colleague's recommendation. She needs to create an account to access the platform's features for her upcoming project collaboration.
 
-**Context & Action:**
-Sarah, a marketing professional, discovers the platform through a colleague's recommendation. She needs to create an account to access the platform's collaborative features and wants to complete the registration process quickly and securely to start her first project.
+### User Goal
+To successfully create an account, verify her identity, and complete the initial setup to start using the platform efficiently.
 
-**User Goal:** To successfully create an account and gain access to platform features with minimal friction while ensuring account security.
+### Business Goal
+To convert a potential user into an active platform member while building trust through a secure, user-friendly onboarding process that demonstrates the platform's value proposition.
 
-**Business Goal:** To convert visitors into registered users while collecting necessary verification information and building trust through a secure onboarding process.
+### Workflow Variation 1: Email-Based Registration
 
-#### Workflow 1.1: New User Registration Flow
+#### Screen Flow:
 
-**Screen Sequence:** 1.0 → 2.0 → 3.0 → 4.0 → 5.0 → 6.0 → 7.0
+**1.0 Landing Page**
+- **Goal**: Build credibility and encourage user registration
+- **Description**: 
+  - User can view platform benefits and value proposition
+  - User can access registration/login options
+  - User can explore basic features without registration
+  - User can view testimonials and success stories
+  - User can access help documentation
+- **Design Problems**:
+  - HMW communicate the platform's value without overwhelming new users?
+  - HMW build immediate trust and credibility?
+  - HMW guide users toward registration without being pushy?
+- **Design Opportunities**:
+  - What if we could show personalized benefits based on user behavior?
+  - What if there was a quick demo or interactive preview?
+  - What if we could provide social proof through real-time user activity?
 
-##### 1.0 Landing Page
-**Page Goal:** To introduce the platform value proposition and encourage user registration
+**2.0 Registration Form - Username Entry**
+- **Goal**: Capture user's preferred username and initiate registration
+- **Description**:
+  - User enters desired username (minimum 3 characters)
+  - Real-time validation for username availability
+  - Clear error messaging for invalid inputs
+  - Option to cancel and return to landing page
+- **Design Problems**:
+  - HMW help users choose available usernames quickly?
+  - HMW provide clear validation feedback without frustration?
+  - HMW maintain user motivation during form completion?
+- **Design Opportunities**:
+  - What if we could suggest alternative usernames automatically?
+  - What if we showed username strength indicators?
+  - What if we could import usernames from social profiles?
 
-**Screen Description:**
-- User can view platform benefits and key features
-- User can access "Get Started" or "Sign Up" call-to-action buttons
-- User can view testimonials and social proof
-- User can access help documentation or FAQ
-- User can view pricing information (if applicable)
+**3.0 Contact Information Collection**
+- **Goal**: Gather necessary contact details for verification
+- **Description**:
+  - User enters email address with complete validation
+  - User enters phone number with country code (+91 format)
+  - Form validation ensures proper email and phone formats
+  - Clear indication of which fields are required
+- **Design Problems**:
+  - HMW reduce form abandonment during information collection?
+  - HMW ensure data accuracy while maintaining ease of use?
+  - HMW communicate why this information is needed?
+- **Design Opportunities**:
+  - What if we could auto-detect country codes based on location?
+  - What if we provided multiple verification options?
+  - What if we could pre-fill information from social logins?
 
-**Design Problems:**
-- HMW communicate the platform's value proposition clearly without overwhelming new users?
-- HMW build immediate trust and credibility for first-time visitors?
-- HMW reduce cognitive load while highlighting key benefits?
-- HMW address common user concerns about security and privacy?
+**4.0 Verification Method Selection**
+- **Goal**: Allow user to choose preferred verification method
+- **Description**:
+  - User can choose between email or SMS verification
+  - Clear explanation of each verification method
+  - Estimated time for code delivery
+  - Option to change contact information if needed
+- **Design Problems**:
+  - HMW help users choose the most convenient verification method?
+  - HMW set proper expectations for verification timing?
+  - HMW handle cases where verification fails?
+- **Design Opportunities**:
+  - What if we could recommend the fastest verification method?
+  - What if we provided backup verification options?
+  - What if we could use biometric verification for mobile users?
 
-**Design Opportunities:**
-- What if we could provide personalized value propositions based on user behavior?
-- What if there was an interactive demo or tour available?
-- What if we could show real-time user activity or success metrics?
-- What if we provided industry-specific landing experiences?
+**5.0 Verification Code Entry**
+- **Goal**: Confirm user's identity through code verification
+- **Description**:
+  - User enters 6-digit verification code
+  - Clear indication of code format and length
+  - Resend code option with cooldown timer
+  - Option to change verification method
+- **Design Problems**:
+  - HMW make code entry as frictionless as possible?
+  - HMW handle cases where users don't receive codes?
+  - HMW prevent user frustration during verification?
+- **Design Opportunities**:
+  - What if we could auto-detect codes from SMS/email?
+  - What if we provided voice call verification as backup?
+  - What if we could use one-tap verification links?
 
-##### 2.0 Username Creation
-**Page Goal:** To capture a unique username and begin the registration process
+**Pu.1 Verification Sent Confirmation**
+- **Goal**: Confirm code has been sent and provide next steps
+- **Description**:
+  - Clear confirmation message with delivery method
+  - Expected delivery time information
+  - Instructions for checking spam/junk folders
+  - Option to close and proceed to code entry
+- **Design Problems**:
+  - HMW ensure users know where to look for verification codes?
+  - HMW reduce anxiety about code delivery timing?
+- **Design Opportunities**:
+  - What if we could provide real-time delivery status?
+  - What if we could integrate with email/SMS apps?
 
-**Screen Description:**
-- User enters desired username with real-time availability checking
-- User sees username requirements and validation feedback
-- User can proceed to next step once valid username is entered
-- User can view password requirements preview
-- User can access help or support if needed
+**6.0 Password Creation**
+- **Goal**: Secure account with strong password
+- **Description**:
+  - User creates password (minimum 6 characters)
+  - Real-time password strength indicator
+  - Clear password requirements
+  - Option to show/hide password
+- **Design Problems**:
+  - HMW encourage strong passwords without complexity frustration?
+  - HMW make password requirements clear and achievable?
+- **Design Opportunities**:
+  - What if we could suggest secure passwords?
+  - What if we integrated with password managers?
+  - What if we provided security tips during creation?
 
-**Design Problems:**
-- HMW help users create memorable yet unique usernames?
-- HMW provide clear feedback on username availability and requirements?
-- HMW prevent user frustration when preferred usernames are taken?
-- HMW ensure accessibility for users with different input methods?
+**7.0 Registration Success**
+- **Goal**: Confirm successful registration and guide next steps
+- **Description**:
+  - Success confirmation with welcome message
+  - Overview of available features
+  - Quick start guide or tutorial options
+  - Direct access to main application
+- **Design Problems**:
+  - HMW celebrate success while maintaining momentum?
+  - HMW guide users to their first valuable action?
+- **Design Opportunities**:
+  - What if we could personalize the welcome experience?
+  - What if we provided achievement badges for completion?
+  - What if we could connect users with similar interests immediately?
 
-**Design Opportunities:**
-- What if we could suggest alternative usernames when the preferred one is taken?
-- What if we could integrate social media usernames for consistency?
-- What if we provided username strength indicators?
-- What if we could reserve usernames temporarily during the registration process?
+### Workflow Variation 2: SMS-Based Registration
 
-##### 3.0 Contact Information Verification
-**Page Goal:** To collect and verify user contact information for account security
+#### Screen Flow:
+**1.0 Landing Page** → **2.0 Registration Form - Username Entry** → **3.0 Contact Information Collection** → **4.1 SMS Verification Selection** → **5.1 SMS Code Entry** → **Pu.2 SMS Verification Sent** → **6.0 Password Creation** → **7.0 Registration Success**
 
-**Screen Description:**
-- User enters email address with format validation
-- User enters phone number with country code selection
-- User can choose verification method (email or SMS)
-- User sees clear indication of which information is required vs optional
-- User can edit previously entered username if needed
+**4.1 SMS Verification Selection**
+- **Goal**: Initiate SMS-based verification process
+- **Description**:
+  - User selects SMS verification option
+  - Phone number validation and formatting
+  - Clear indication of SMS charges (if applicable)
+  - International number support
 
-**Design Problems:**
-- HMW make the verification process feel secure rather than intrusive?
-- HMW accommodate international users with different phone number formats?
-- HMW provide clear explanation of why this information is needed?
-- HMW handle users who don't want to provide phone numbers?
+**5.1 SMS Code Entry**
+- **Goal**: Complete SMS verification
+- **Description**:
+  - 6-digit SMS code entry
+  - Auto-detection of incoming SMS
+  - Resend SMS option with rate limiting
+  - Fallback to email verification
 
-**Design Opportunities:**
-- What if we could auto-detect country codes based on user location?
-- What if we provided alternative verification methods for privacy-conscious users?
-- What if we could pre-populate information from social login options?
-- What if we showed security badges or certifications to build trust?
-
-##### 4.0 Verification Code Delivery
-**Page Goal:** To confirm successful delivery of verification code and set expectations
-
-**Screen Description:**
-- User sees confirmation that verification code has been sent
-- User can see which method was used (email/SMS) and to which address/number
-- User can request code resend after appropriate wait time
-- User can change verification method if needed
-- User can see estimated delivery time and next steps
-
-**Design Problems:**
-- HMW manage user anxiety during the waiting period?
-- HMW handle cases where codes don't arrive or are delayed?
-- HMW prevent spam or abuse of the code sending system?
-- HMW accommodate users who may have entered incorrect contact information?
-
-**Design Opportunities:**
-- What if we could provide real-time delivery status updates?
-- What if we offered multiple verification methods simultaneously?
-- What if we could integrate with email/SMS providers for better delivery rates?
-- What if we provided troubleshooting tips for common delivery issues?
-
-##### 5.0 Code Verification
-**Page Goal:** To verify user identity through the provided verification code
-
-**Screen Description:**
-- User enters 6-digit verification code with clear input formatting
-- User sees real-time validation of code format
-- User can request new code if current one expires or is incorrect
-- User can go back to change contact information if needed
-- User sees clear error messages for incorrect codes
-
-**Design Problems:**
-- HMW make code entry as frictionless as possible?
-- HMW handle expired or incorrect codes gracefully?
-- HMW prevent brute force attacks while maintaining usability?
-- HMW accommodate users with accessibility needs for code entry?
-
-**Design Opportunities:**
-- What if we could auto-detect and fill codes from SMS/email?
-- What if we provided voice-based code delivery for accessibility?
-- What if we could use biometric verification as an alternative?
-- What if we implemented smart retry logic based on user behavior?
-
-##### 6.0 Password Creation
-**Page Goal:** To establish secure account credentials and complete registration
-
-**Screen Description:**
-- User creates password with real-time strength indicators
-- User sees password requirements clearly displayed
-- User can toggle password visibility for verification
-- User confirms password with matching validation
-- User can see security tips and best practices
-
-**Design Problems:**
-- HMW encourage strong passwords without creating user frustration?
-- HMW provide clear feedback on password strength and requirements?
-- HMW handle password confirmation errors effectively?
-- HMW educate users about password security without overwhelming them?
-
-**Design Opportunities:**
-- What if we could suggest strong passwords based on user preferences?
-- What if we integrated with password managers for seamless setup?
-- What if we provided personalized security recommendations?
-- What if we could offer alternative authentication methods like passkeys?
-
-##### 7.0 Registration Success
-**Page Goal:** To confirm successful account creation and guide users to next steps
-
-**Screen Description:**
-- User sees confirmation of successful account creation
-- User can access immediate next steps or onboarding tour
-- User can set up profile information or skip for later
-- User can explore key features through guided introduction
-- User can access support resources and help documentation
-
-**Design Problems:**
-- HMW maintain user momentum after successful registration?
-- HMW introduce key features without overwhelming new users?
-- HMW personalize the initial experience based on user type or goals?
-- HMW measure and optimize the onboarding completion rate?
-
-**Design Opportunities:**
-- What if we could provide personalized onboarding based on registration source?
-- What if we offered immediate value through quick wins or achievements?
-- What if we could connect new users with relevant existing users or content?
-- What if we implemented progressive disclosure of advanced features?
-
-### Scenario 1.2: Returning User Login
-
-**Context & Action:**
-Mike, an existing user, returns to the platform after a week away. He needs to access his previous work and continue where he left off, expecting a quick and secure login process that remembers his preferences.
-
-**User Goal:** To quickly and securely access his account and resume previous activities with minimal interruption.
-
-**Business Goal:** To provide seamless re-engagement for existing users while maintaining security standards and encouraging continued platform usage.
-
-#### Workflow 1.2: Returning User Login Flow
-
-**Screen Sequence:** 1.0 → 2.0 → 3.0 → 4.0
-
-##### 1.0 Login Landing
-**Page Goal:** To provide quick access for returning users while maintaining security
-
-**Screen Description:**
-- User can enter username/email with auto-complete suggestions
-- User can access "Forgot Username" or "Forgot Password" options
-- User can see "Remember Me" option for trusted devices
-- User can access registration option if needed
-- User can view security information and privacy policy
-
-**Design Problems:**
-- HMW balance convenience with security for returning users?
-- HMW handle users who forget their login credentials?
-- HMW accommodate different login preferences (username vs email)?
-- HMW prevent unauthorized access while maintaining usability?
-
-**Design Opportunities:**
-- What if we could implement social login options for convenience?
-- What if we provided biometric login on supported devices?
-- What if we could detect and prevent suspicious login attempts?
-- What if we offered single sign-on integration with workplace tools?
+**Pu.2 SMS Verification Sent**
+- **Goal**: Confirm SMS delivery and provide guidance
+- **Description**:
+  - SMS delivery confirmation
+  - Network delay warnings
+  - Alternative verification options
+  - Contact support if issues persist
 
 ---
 
-## EXPERIENCE 2: INTERACTIVE COMMUNICATION
+## Scenario 2: Returning User Authentication
 
-### Scenario 2.1: AI-Assisted Conversation
+### Context
+Mike, an existing user, returns to the platform after a week to continue his previous work. He needs to log in quickly and access his saved projects.
 
-**Context & Action:**
-Jenna, a content creator, needs to brainstorm ideas for her next project. She wants to use the platform's AI chat feature to generate creative concepts and refine her ideas through an interactive conversation that feels natural and productive.
+### User Goal
+To log in efficiently and immediately access his previous work and saved data without friction.
 
-**User Goal:** To engage in meaningful dialogue with AI assistance to generate, refine, and develop creative ideas efficiently.
+### Business Goal
+To provide seamless re-engagement that encourages regular platform usage and reduces abandonment.
 
-**Business Goal:** To demonstrate AI capabilities while collecting user interaction data to improve the AI model and increase user engagement with premium features.
+### Workflow Variation 1: Standard Login
 
-#### Workflow 2.1: AI Chat Interaction Flow
+#### Screen Flow:
 
-**Screen Sequence:** 1.0 → 2.0 → 3.0 → 4.0 → 5.0
+**1.0 Login Page**
+- **Goal**: Facilitate quick and secure user authentication
+- **Description**:
+  - Username/email input field
+  - Password input with show/hide toggle
+  - Remember me option for convenience
+  - Forgot password recovery link
+  - Social login alternatives
+- **Design Problems**:
+  - HMW make login as frictionless as possible for returning users?
+  - HMW balance security with convenience?
+  - HMW handle forgotten credentials gracefully?
+- **Design Opportunities**:
+  - What if we could use biometric authentication?
+  - What if we provided single sign-on options?
+  - What if we could remember user preferences across devices?
 
-##### 1.0 Chat Interface Landing
-**Page Goal:** To introduce users to AI chat capabilities and encourage first interaction
+**2.0 Dashboard/Home**
+- **Goal**: Provide immediate access to user's most relevant content
+- **Description**:
+  - Personalized dashboard with recent activity
+  - Quick access to frequently used features
+  - Notifications and updates
+  - Search functionality for finding specific content
+- **Design Problems**:
+  - HMW prioritize the most relevant information for each user?
+  - HMW help users quickly resume their previous work?
+- **Design Opportunities**:
+  - What if we could predict what users want to do next?
+  - What if we provided smart recommendations based on usage patterns?
 
-**Screen Description:**
-- User sees clean chat interface with welcome message
-- User can view suggested conversation starters or prompts
-- User can access chat history and previous conversations
-- User can customize chat settings (theme, notifications)
-- User can access help documentation for chat features
+### Workflow Variation 2: Password Recovery
 
-**Design Problems:**
-- HMW make the AI chat feel approachable and not intimidating?
-- HMW set appropriate expectations for AI capabilities and limitations?
-- HMW encourage users to engage in meaningful conversations?
-- HMW handle users who are new to AI interaction?
+#### Screen Flow:
+**1.1 Forgot Password** → **2.1 Email Recovery** → **3.1 Reset Link Sent** → **4.1 New Password Creation** → **5.1 Password Reset Success** → **2.0 Dashboard/Home**
 
-**Design Opportunities:**
-- What if we could personalize conversation starters based on user interests?
-- What if we provided examples of successful AI interactions?
-- What if we could adapt the AI personality to user preferences?
-- What if we offered different AI assistants for different use cases?
-
-##### 2.0 Active Conversation
-**Page Goal:** To facilitate smooth, natural conversation flow between user and AI
-
-**Screen Description:**
-- User can type messages with rich text formatting options
-- User sees real-time typing indicators and message status
-- User can attach files, images, or links to enhance conversation
-- User can use voice input for hands-free interaction
-- User can save important messages or conversation snippets
-
-**Design Problems:**
-- HMW maintain conversation context over long interactions?
-- HMW handle AI responses that may be inaccurate or unhelpful?
-- HMW provide appropriate response time expectations?
-- HMW accommodate different communication styles and preferences?
-
-**Design Opportunities:**
-- What if we could provide real-time fact-checking for AI responses?
-- What if we offered conversation templates for common use cases?
-- What if we could integrate external data sources for more accurate responses?
-- What if we provided collaborative features for team-based AI interactions?
-
----
-
-## EXPERIENCE 3: DATA MANAGEMENT & VISUALIZATION
-
-### Scenario 3.1: Data Dashboard Creation
-
-**Context & Action:**
-David, a business analyst, needs to create a comprehensive dashboard to visualize quarterly sales data for his team. He wants to import data from multiple sources and create interactive charts that his colleagues can use to make informed decisions.
-
-**User Goal:** To efficiently create informative and interactive data visualizations that provide actionable insights for business decision-making.
-
-**Business Goal:** To showcase advanced data visualization capabilities while encouraging users to upgrade to premium features and increase platform stickiness through valuable business tools.
-
-#### Workflow 3.1: Dashboard Creation Flow
-
-**Screen Sequence:** 1.0 → 2.0 → 3.0 → 4.0 → 5.0 → 6.0
-
-##### 1.0 Dashboard Hub
-**Page Goal:** To provide overview of existing dashboards and easy access to creation tools
-
-**Screen Description:**
-- User can view existing dashboards with preview thumbnails
-- User can access "Create New Dashboard" with template options
-- User can search and filter dashboards by date, type, or tags
-- User can duplicate or share existing dashboards
-- User can access dashboard analytics and usage statistics
-
-**Design Problems:**
-- HMW help users organize and find relevant dashboards quickly?
-- HMW encourage users to create their first dashboard?
-- HMW showcase the value of dashboard creation without overwhelming users?
-- HMW handle users with large numbers of existing dashboards?
-
-**Design Opportunities:**
-- What if we could suggest dashboard templates based on user data?
-- What if we provided collaborative dashboard creation features?
-- What if we could auto-generate dashboards from uploaded data?
-- What if we offered dashboard performance optimization suggestions?
-
-##### 2.0 Data Import Interface
-**Page Goal:** To facilitate easy and reliable data import from various sources
-
-**Screen Description:**
-- User can upload files (CSV, Excel, JSON) with drag-and-drop interface
-- User can connect to external data sources (APIs, databases)
-- User can preview data structure and format before import
-- User can map data fields and set data types
-- User can schedule automatic data updates
-
-**Design Problems:**
-- HMW handle large data files without performance issues?
-- HMW provide clear feedback during data processing?
-- HMW help users resolve data format or structure issues?
-- HMW ensure data security and privacy during import?
-
-**Design Opportunities:**
-- What if we could auto-detect optimal chart types for imported data?
-- What if we provided data cleaning and transformation tools?
-- What if we could suggest data enrichment from external sources?
-- What if we offered real-time data streaming capabilities?
+**1.1 Forgot Password**
+- **Goal**: Initiate password recovery process
+- **Description**:
+  - Email/username input for account identification
+  - Clear instructions for recovery process
+  - Security questions as alternative
+  - Contact support option
 
 ---
 
-## EXPERIENCE 4: CONTENT DISCOVERY & NAVIGATION
+## Scenario 3: Interactive Chat Communication
 
-### Scenario 4.1: Feature Exploration
+### Context
+Emily, a project manager, needs to get quick answers about platform features and wants to collaborate with an AI assistant to analyze her project data.
 
-**Context & Action:**
-Lisa, a new user, has completed registration and wants to explore the platform's capabilities. She needs to understand what features are available and how they can help her achieve her professional goals without feeling overwhelmed by too many options.
+### User Goal
+To efficiently communicate with AI assistance to get answers, analyze data, and complete tasks through natural conversation.
 
-**User Goal:** To efficiently discover relevant features and understand their value proposition while building confidence in using the platform.
+### Business Goal
+To provide intelligent assistance that increases user engagement, reduces support burden, and demonstrates advanced platform capabilities.
 
-**Business Goal:** To increase feature adoption and user engagement while reducing time-to-value and support requests through effective feature discovery.
+### Workflow Variation 1: General Inquiry Chat
 
-#### Workflow 4.1: Guided Feature Discovery Flow
+#### Screen Flow:
 
-**Screen Sequence:** 1.0 → 2.0 → 3.0 → 4.0 → 5.0
+**1.0 Chat Interface**
+- **Goal**: Provide intuitive communication interface
+- **Description**:
+  - Clean chat window with message history
+  - Text input with rich formatting options
+  - File attachment capabilities
+  - Voice message options
+  - Theme selection (light/dark)
+- **Design Problems**:
+  - HMW make the chat interface feel natural and responsive?
+  - HMW handle different types of user inputs effectively?
+  - HMW maintain conversation context across sessions?
+- **Design Opportunities**:
+  - What if we could provide suggested responses?
+  - What if we could integrate with external data sources?
+  - What if we could provide real-time collaboration features?
 
-##### 1.0 Main Navigation Hub
-**Page Goal:** To provide intuitive access to all platform features while maintaining clarity
+**2.0 AI Response Processing**
+- **Goal**: Provide intelligent and helpful responses
+- **Description**:
+  - Real-time typing indicators
+  - Structured response formatting
+  - Interactive elements within responses
+  - Follow-up question suggestions
+- **Design Problems**:
+  - HMW ensure AI responses are accurate and helpful?
+  - HMW handle cases where AI cannot provide answers?
+- **Design Opportunities**:
+  - What if we could provide visual aids with responses?
+  - What if we could connect users with human experts when needed?
 
-**Screen Description:**
-- User can access primary features through main navigation menu
-- User can view feature categories with descriptive icons and labels
-- User can access search functionality to find specific features
-- User can view recently used features and quick actions
-- User can access personalized recommendations based on usage patterns
+**3.0 Action Cards**
+- **Goal**: Enable users to take direct actions from chat
+- **Description**:
+  - Interactive cards for common actions
+  - Quick access to related features
+  - Data visualization previews
+  - Workflow shortcuts
+- **Design Problems**:
+  - HMW make action cards discoverable and useful?
+  - HMW integrate actions seamlessly with conversation flow?
+- **Design Opportunities**:
+  - What if cards could be customized based on user preferences?
+  - What if we could provide contextual actions based on conversation?
 
-**Design Problems:**
-- HMW organize complex feature sets without overwhelming users?
-- HMW help users discover features they didn't know they needed?
-- HMW maintain navigation consistency across different screen sizes?
-- HMW accommodate users with different levels of technical expertise?
+### Workflow Variation 2: Data Analysis Chat
 
-**Design Opportunities:**
-- What if we could provide contextual feature suggestions based on current tasks?
-- What if we offered progressive feature disclosure based on user proficiency?
-- What if we could create personalized navigation layouts?
-- What if we provided feature usage analytics to help users optimize their workflow?
+#### Screen Flow:
+**1.1 Data Upload Chat** → **2.1 Analysis Request** → **3.1 Processing Status** → **4.1 Results Visualization** → **5.1 Interactive Exploration**
 
----
-
-## EXPERIENCE 5: ACCOUNT MANAGEMENT & SETTINGS
-
-### Scenario 5.1: Profile Customization
-
-**Context & Action:**
-Robert, an established user, wants to update his profile information and customize his account settings to better reflect his current role and preferences. He needs to access privacy controls and notification settings to optimize his platform experience.
-
-**User Goal:** To maintain accurate profile information and customize platform settings to match personal preferences and privacy requirements.
-
-**Business Goal:** To encourage users to maintain complete profiles for better personalization while respecting privacy preferences and building long-term user satisfaction.
-
-#### Workflow 5.1: Account Settings Management Flow
-
-**Screen Sequence:** 1.0 → 2.0 → 3.0 → 4.0 → 5.0
-
-##### 1.0 Account Settings Dashboard
-**Page Goal:** To provide comprehensive overview of account settings with easy navigation
-
-**Screen Description:**
-- User can view current profile information and settings status
-- User can access different settings categories (Profile, Privacy, Notifications, Security)
-- User can see recent account activity and security alerts
-- User can access account deletion or deactivation options
-- User can view subscription status and billing information
-
-**Design Problems:**
-- HMW organize complex settings without creating confusion?
-- HMW help users understand the impact of different setting changes?
-- HMW provide appropriate security warnings without creating anxiety?
-- HMW accommodate users who rarely change settings vs power users?
-
-**Design Opportunities:**
-- What if we could provide smart settings recommendations based on usage patterns?
-- What if we offered settings import/export for easy account migration?
-- What if we could provide settings templates for different user types?
-- What if we offered guided settings tours for new users?
+**1.1 Data Upload Chat**
+- **Goal**: Enable easy data sharing through chat
+- **Description**:
+  - Drag-and-drop file upload
+  - Multiple file format support
+  - Upload progress indicators
+  - Data preview capabilities
 
 ---
 
-## ACCESSIBILITY & SCALABILITY CONSIDERATIONS
+## Scenario 4: Multi-Step Form Completion
 
-### Accessibility Features
-- **Keyboard Navigation:** All workflows support full keyboard navigation with logical tab order
-- **Screen Reader Support:** Semantic HTML and ARIA labels throughout all interfaces
-- **Color Contrast:** WCAG 2.1 AA compliant color schemes across all themes
-- **Text Scaling:** Support for up to 200% text scaling without horizontal scrolling
-- **Alternative Input Methods:** Voice input, switch navigation, and eye-tracking support
-- **Cognitive Accessibility:** Clear language, consistent patterns, and error prevention
+### Context
+David, a data analyst, needs to complete a complex project setup that involves multiple steps including data source configuration, analysis parameters, and output preferences.
 
-### Scalability Architecture
-- **Component-Based Design:** Modular components that can be reused across different workflows
-- **Progressive Enhancement:** Core functionality works without JavaScript, enhanced features layer on top
-- **Performance Optimization:** Lazy loading, code splitting, and efficient data handling
-- **Internationalization:** Support for multiple languages and right-to-left text
-- **Device Responsiveness:** Adaptive layouts for desktop, tablet, and mobile devices
-- **Load Balancing:** Architecture supports horizontal scaling for increased user loads
+### User Goal
+To complete a multi-step process efficiently while understanding progress and being able to save/resume work.
 
-### Error Handling & Edge Cases
-- **Network Connectivity:** Offline functionality and graceful degradation
-- **Data Validation:** Client and server-side validation with clear error messaging
-- **Session Management:** Automatic session extension and secure timeout handling
-- **Browser Compatibility:** Support for modern browsers with graceful fallbacks
-- **Data Recovery:** Auto-save functionality and recovery options for interrupted workflows
+### Business Goal
+To guide users through complex workflows while reducing abandonment and ensuring data accuracy.
+
+### Workflow Variation 1: Linear Stepper Process
+
+#### Screen Flow:
+
+**1.0 Process Overview**
+- **Goal**: Orient user to the complete process
+- **Description**:
+  - Step-by-step process visualization
+  - Estimated completion time
+  - Save and resume options
+  - Help and support access
+- **Design Problems**:
+  - HMW help users understand the complete process upfront?
+  - HMW reduce anxiety about process complexity?
+- **Design Opportunities**:
+  - What if we could show personalized completion estimates?
+  - What if we could provide process templates for common use cases?
+
+**2.0 Step 1: Basic Information**
+- **Goal**: Collect fundamental project details
+- **Description**:
+  - Project name and description
+  - Category selection
+  - Priority level setting
+  - Auto-save functionality
+- **Design Problems**:
+  - HMW make form completion feel effortless?
+  - HMW provide helpful guidance without overwhelming users?
+- **Design Opportunities**:
+  - What if we could suggest project names based on content?
+  - What if we could auto-categorize based on description?
+
+**3.0 Step 2: Configuration Settings**
+- **Goal**: Capture detailed configuration preferences
+- **Description**:
+  - Advanced settings with smart defaults
+  - Conditional fields based on previous selections
+  - Preview of configuration impact
+  - Validation and error handling
+
+**4.0 Step 3: Review and Confirmation**
+- **Goal**: Allow final review before submission
+- **Description**:
+  - Complete summary of all selections
+  - Edit options for each section
+  - Terms and conditions acceptance
+  - Final submission confirmation
+
+**5.0 Completion Success**
+- **Goal**: Confirm successful completion and guide next steps
+- **Description**:
+  - Success confirmation with reference number
+  - Next steps and timeline information
+  - Access to created resources
+  - Sharing and collaboration options
+
+### Workflow Variation 2: Non-Linear Stepper Process
+
+#### Screen Flow:
+**1.1 Flexible Overview** → **2.1 Any Step Access** → **3.1 Dynamic Validation** → **4.1 Smart Completion** → **5.0 Completion Success**
+
+**1.1 Flexible Overview**
+- **Goal**: Allow users to complete steps in preferred order
+- **Description**:
+  - All steps accessible from overview
+  - Completion status indicators
+  - Dependency warnings
+  - Smart suggestions for next steps
 
 ---
 
-## MEASUREMENT & OPTIMIZATION
+## Scenario 5: Data Visualization and Analysis
 
-### Key Performance Indicators
-- **User Engagement:** Time spent in each workflow, feature adoption rates
-- **Conversion Metrics:** Registration completion rate, feature trial-to-paid conversion
-- **User Satisfaction:** Net Promoter Score, user feedback ratings
-- **Technical Performance:** Page load times, error rates, uptime metrics
-- **Accessibility Compliance:** Automated and manual accessibility testing results
+### Context
+Lisa, a business analyst, needs to create interactive dashboards from her data to present insights to stakeholders.
 
-### Continuous Improvement Process
-- **User Research:** Regular usability testing and user interviews
-- **Analytics Review:** Monthly analysis of user behavior and workflow performance
-- **A/B Testing:** Systematic testing of workflow variations and improvements
-- **Feedback Integration:** User feedback collection and prioritization process
-- **Performance Monitoring:** Real-time monitoring of technical and user experience metrics
+### User Goal
+To transform raw data into meaningful visualizations that effectively communicate insights to different audiences.
+
+### Business Goal
+To provide powerful data visualization tools that demonstrate platform value and encourage continued usage.
+
+### Workflow Variation 1: Chart Creation Process
+
+#### Screen Flow:
+
+**1.0 Data Source Selection**
+- **Goal**: Connect to relevant data sources
+- **Description**:
+  - Multiple data source options (upload, connect, import)
+  - Data preview and validation
+  - Format detection and conversion
+  - Sample data for testing
+- **Design Problems**:
+  - HMW make data connection as simple as possible?
+  - HMW handle various data formats and quality issues?
+- **Design Opportunities**:
+  - What if we could auto-detect optimal chart types?
+  - What if we could provide data cleaning suggestions?
+
+**2.0 Chart Type Selection**
+- **Goal**: Choose appropriate visualization method
+- **Description**:
+  - Chart type recommendations based on data
+  - Interactive previews of different chart types
+  - Customization options for each type
+  - Accessibility considerations
+- **Design Problems**:
+  - HMW help users choose the most effective chart type?
+  - HMW make complex charts accessible to all users?
+- **Design Opportunities**:
+  - What if we could provide chart effectiveness scores?
+  - What if we could suggest multiple chart combinations?
+
+**3.0 Customization Interface**
+- **Goal**: Fine-tune visualization appearance and behavior
+- **Description**:
+  - Color scheme selection
+  - Label and title customization
+  - Interactive features configuration
+  - Responsive design options
+- **Design Problems**:
+  - HMW balance customization power with simplicity?
+  - HMW ensure visualizations remain effective while customized?
+- **Design Opportunities**:
+  - What if we could provide brand-consistent templates?
+  - What if we could suggest accessibility improvements?
+
+**4.0 Preview and Testing**
+- **Goal**: Validate visualization before publishing
+- **Description**:
+  - Full-screen preview mode
+  - Interactive testing capabilities
+  - Performance optimization suggestions
+  - Sharing preview with stakeholders
+- **Design Problems**:
+  - HMW ensure visualizations work across different devices?
+  - HMW help users identify potential issues before publishing?
+- **Design Opportunities**:
+  - What if we could simulate different user scenarios?
+  - What if we could provide automated accessibility testing?
+
+**5.0 Publishing and Sharing**
+- **Goal**: Make visualization available to intended audience
+- **Description**:
+  - Multiple sharing options (link, embed, export)
+  - Permission and access control
+  - Usage analytics and feedback collection
+  - Version control and updates
 
 ---
 
-## CONCLUSION
+## Scenario 6: Account Management and Settings
 
-This comprehensive user workflow documentation provides a systematic approach to user experience design that balances user needs with business objectives. The workflows are designed to be accessible, scalable, and continuously improvable through data-driven optimization.
+### Context
+Robert, a long-time user, needs to update his profile information, manage his privacy settings, and configure notification preferences.
 
-Each scenario addresses real user contexts and provides multiple design variations to accommodate different user types and situations. The focus on accessibility ensures that all users can successfully complete their tasks, while the scalability considerations support future growth and feature expansion.
+### User Goal
+To efficiently manage account settings and preferences to optimize his platform experience.
 
-The documentation serves as a foundation for development teams, designers, and product managers to create cohesive, user-centered experiences that drive both user satisfaction and business success.
+### Business Goal
+To provide comprehensive account management that increases user satisfaction and platform stickiness.
+
+### Workflow Variation 1: Profile Management
+
+#### Screen Flow:
+
+**1.0 Account Dashboard**
+- **Goal**: Provide overview of account status and quick access to settings
+- **Description**:
+  - Account summary with key information
+  - Quick settings toggles
+  - Recent activity overview
+  - Security status indicators
+- **Design Problems**:
+  - HMW organize account information for easy scanning?
+  - HMW highlight important account issues that need attention?
+- **Design Opportunities**:
+  - What if we could provide personalized account health scores?
+  - What if we could suggest optimizations based on usage patterns?
+
+**2.0 Profile Information**
+- **Goal**: Update personal and professional information
+- **Description**:
+  - Editable profile fields with validation
+  - Profile photo upload and cropping
+  - Professional information and bio
+  - Contact information management
+- **Design Problems**:
+  - HMW make profile editing feel effortless?
+  - HMW ensure data accuracy while maintaining ease of use?
+- **Design Opportunities**:
+  - What if we could import information from professional networks?
+  - What if we could suggest profile completeness improvements?
+
+**3.0 Privacy Settings**
+- **Goal**: Configure data sharing and privacy preferences
+- **Description**:
+  - Granular privacy controls
+  - Data sharing preferences
+  - Visibility settings for different user groups
+  - Data export and deletion options
+- **Design Problems**:
+  - HMW make privacy settings understandable and actionable?
+  - HMW balance functionality with privacy protection?
+- **Design Opportunities**:
+  - What if we could provide privacy impact explanations?
+  - What if we could suggest optimal privacy configurations?
+
+**4.0 Notification Preferences**
+- **Goal**: Customize communication preferences
+- **Description**:
+  - Notification type selection
+  - Delivery method preferences (email, SMS, in-app)
+  - Frequency and timing controls
+  - Do not disturb scheduling
+- **Design Problems**:
+  - HMW help users find the right balance of notifications?
+  - HMW prevent notification fatigue while keeping users engaged?
+- **Design Opportunities**:
+  - What if we could learn optimal notification timing for each user?
+  - What if we could provide notification effectiveness feedback?
 
 ---
 
-*Document Version: 1.0*  
-*Last Updated: 2024*  
-*Next Review: Quarterly*
+## Error States and Edge Cases
+
+### Er.1 Network Connection Issues
+- **Goal**: Handle connectivity problems gracefully
+- **Description**: Offline mode capabilities, sync when reconnected, clear error messaging
+
+### Er.2 Form Validation Errors
+- **Goal**: Guide users to correct input errors
+- **Description**: Inline validation, helpful error messages, suggested corrections
+
+### Er.3 Authentication Failures
+- **Goal**: Help users resolve login issues
+- **Description**: Clear error explanations, recovery options, support contact
+
+### Er.4 Data Processing Errors
+- **Goal**: Handle data-related issues transparently
+- **Description**: Error explanations, retry options, alternative approaches
+
+---
+
+## Accessibility Considerations
+
+### Universal Design Principles
+- **Keyboard Navigation**: All interactive elements accessible via keyboard
+- **Screen Reader Support**: Proper ARIA labels and semantic HTML
+- **Color Contrast**: WCAG 2.1 AA compliance for all text and interactive elements
+- **Focus Management**: Clear focus indicators and logical tab order
+- **Alternative Text**: Descriptive alt text for all images and icons
+- **Responsive Design**: Usable across all device sizes and orientations
+
+### Assistive Technology Support
+- **Voice Control**: Voice navigation and input capabilities
+- **High Contrast Mode**: Enhanced visibility options
+- **Text Scaling**: Support for up to 200% text scaling
+- **Motion Reduction**: Respect for reduced motion preferences
+
+---
+
+## Scalability Considerations
+
+### Technical Scalability
+- **Component Modularity**: Reusable components across different workflows
+- **Performance Optimization**: Lazy loading and efficient rendering
+- **API Design**: RESTful APIs that can handle increased load
+- **Caching Strategy**: Intelligent caching for improved performance
+
+### User Experience Scalability
+- **Progressive Disclosure**: Advanced features available when needed
+- **Customizable Interfaces**: Adaptable to different user skill levels
+- **Workflow Templates**: Reusable patterns for common tasks
+- **Integration Capabilities**: Connect with external tools and services
+
+---
+
+## Success Metrics and KPIs
+
+### User Experience Metrics
+- **Task Completion Rate**: Percentage of users completing intended workflows
+- **Time to Value**: How quickly users achieve their first success
+- **User Satisfaction Score**: Regular feedback collection and analysis
+- **Feature Adoption Rate**: Usage of different platform capabilities
+
+### Business Metrics
+- **User Retention**: Long-term engagement and return usage
+- **Conversion Rate**: From trial to paid users (if applicable)
+- **Support Ticket Reduction**: Fewer issues due to improved UX
+- **User Referrals**: Organic growth through user recommendations
+
+---
+
+## Future Enhancement Opportunities
+
+### Emerging Technologies
+- **AI-Powered Personalization**: Adaptive interfaces based on user behavior
+- **Voice User Interface**: Voice commands for hands-free operation
+- **Augmented Reality**: Enhanced data visualization and interaction
+- **Machine Learning**: Predictive features and intelligent automation
+
+### User Experience Evolution
+- **Collaborative Features**: Real-time collaboration and sharing
+- **Mobile-First Design**: Optimized mobile experiences
+- **Cross-Platform Sync**: Seamless experience across devices
+- **Advanced Analytics**: Deeper insights into user behavior and preferences
+
+---
+
+## Conclusion
+
+This comprehensive user workflow documentation provides a foundation for creating user-centered experiences that balance functionality, accessibility, and scalability. By following these detailed scenarios and considering the various user needs and business objectives, the platform can deliver exceptional value while maintaining technical excellence and inclusive design principles.
+
+The workflows outlined here should be regularly reviewed and updated based on user feedback, analytics data, and evolving business requirements to ensure continued relevance and effectiveness.
